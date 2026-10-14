@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoMo Pay - Confirm Transaction</title>
+  <link rel="stylesheet" href="confirm.css">
+</head>
+<body>
+  <div class="phone-frame">
+    <!-- Header -->
+    <header class="header">
+      <button class="back-btn" id="backBtn" aria-label="Go back" title="Go back">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z" fill="white"/>
+        </svg>
+      </button>
+      <h1 class="header-title">Confirm Transaction</h1>
+      <div class="header-spacer"></div>
+    </header>
+
+    <div class="content">
+      <!-- Review Card -->
+      <div class="confirm-card">
+        <p class="confirm-label">You are sending</p>
+        <p class="confirm-amount" id="displayAmount">UGX 50,000</p>
+        <p class="confirm-to">To <strong id="displayName">Sarah Mary</strong></p>
+        <p class="confirm-phone" id="displayRecipient">0782365986</p>
+
+        <div class="details-box">
+          <div class="confirm-row">
+            <span class="label">Fee</span>
+            <span class="value" id="displayFee">UGX 500</span>
+          </div>
+          <div class="confirm-row">
+            <span class="label">Total</span>
+            <span class="value total" id="displayTotal">UGX 50,500</span>
+          </div>
+          <div class="confirm-row">
+            <span class="label">Reason</span>
+            <span class="value" id="displayReason">Lunch payment</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="warning-text">Please verify the recipient details before confirming</p>
+
+      <div class="btn-group">
+        <button class="confirm-pin-btn" id="confirmBtn">Confirm with PIN</button>
+        <button class="cancel-btn" id="cancelBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PIN Popup Modal -->
+  <div class="modal-overlay" id="pinModal">
+    <div class="modal-box">
+      <h2 class="modal-title">Confirm Payment</h2>
+      <p class="modal-message">
+        You are sending <strong id="modalAmount">UGX 50,000</strong>
+        to <strong id="modalName">Sarah Mary</strong>
+      </p>
+      <p class="modal-phone" id="modalPhone">0782365986</p>
+
+      <div class="pin-group">
+        <label for="confirmPin">Enter your PIN to confirm</label>
+        <input type="password" id="confirmPin" placeholder="Enter PIN" maxlength="6" autocomplete="off">
+      </div>
+
+      <div id="pinError" class="pin-error" style="display: none;"></div>
+
+      <div class="modal-btns">
+        <button class="modal-confirm-btn" id="modalConfirmBtn">Confirm</button>
+        <button class="modal-cancel-btn" id="modalCancelBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="confirm.js"></script>
+</body>
+</html>

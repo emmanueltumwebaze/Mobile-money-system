@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoMo Pay - Receipt</title>
+  <link rel="stylesheet" href="receipt.css">
+</head>
+<body>
+  <div class="phone-frame">
+    <header class="header">
+      <div class="header-spacer"></div>
+      <h1 class="header-title">Receipt</h1>
+      <div class="header-spacer"></div>
+    </header>
+
+    <div class="content">
+      <div class="receipt-card">
+        <div class="success-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+            <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="#1a8f3c"/>
+          </svg>
+        </div>
+        <p class="success-title">Payment Successful</p>
+        <p class="success-sub">Your transaction has been completed successfully</p>
+
+        <div class="receipt-row">
+          <span class="label">Transaction ID</span>
+          <span class="value" id="txId">MM-2026091</span>
+        </div>
+        <div class="receipt-row">
+          <span class="label">Amount</span>
+          <span class="value" id="txAmount">UGX 0</span>
+        </div>
+        <div class="receipt-row">
+          <span class="label">To</span>
+          <span class="value" id="txTo">-</span>
+        </div>
+        <div class="receipt-row">
+          <span class="label">Fee</span>
+          <span class="value" id="txFee">UGX 0</span>
+        </div>
+        <div class="receipt-row">
+          <span class="label">Date and Time</span>
+          <span class="value" id="txDate">-</span>
+        </div>
+        <div class="receipt-row">
+          <span class="label">New Balance</span>
+          <span class="value" id="txBalance">UGX 0</span>
+        </div>
+      </div>
+
+      <button class="done-btn" id="doneBtn">Done</button>
+    </div>
+  </div>
+
+  <script src="receipt.js"></script>
+</body>
+</html>

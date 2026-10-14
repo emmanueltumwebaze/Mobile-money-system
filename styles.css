@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: #FFCC00;
+  width: 320px;
+  border-radius: 16px;
+  padding: 32px 28px 28px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.login-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo */
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  gap:6px;
+  margin-bottom: 18px;
+}
+
+.logo-circle {
+  width: 68px;
+  height: 68px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.logo-circle:hover {
+  transform: scale(1.12) rotate(5deg);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.logo-circle svg path {
+  fill: #FFCC00;
+  transition: fill 0.3s ease;
+}
+
+.logo-circle:hover svg path {
+  fill: #E6B800;
+}
+.log-circle{
+  width:36px;
+  height:36px;
+}
+
+/* Typography */
+.welcome {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+  letter-spacing: -0.3px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 22px;
+  font-weight: 400;
+}
+
+/* Error Box */
+.error-box {
+  background: #ff3b30;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  text-align: left;
+  line-height: 1.4;
+}
+
+/* Input Groups */
+.input-group {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+  transition: color 0.2s ease;
+}
+
+.input-group:focus-within label {
+  color: #0052CC;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  transition: transform 0.25s ease;
+}
+
+.input-icon svg path {
+  transition: fill 0.25s ease;
+}
+
+.input-wrapper:focus-within .input-icon {
+  transform: scale(1.2);
+}
+
+.input-wrapper:focus-within .input-icon svg path {
+  fill: #0052CC;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 12px 14px 12px 40px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background: #FFFFFF;
+  font-size: 14px;
+  color: #1a1a1a;
+  outline: none;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+}
+
+.input-wrapper input::placeholder {
+  color: #999;
+}
+
+.input-wrapper input:hover {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+  border-color: #E0E0E0;
+}
+
+.input-wrapper input:focus {
+  box-shadow: 0 0 0 3px rgba(0, 82, 204, 0.25);
+  border-color: #0052CC;
+}
+
+/* Login Button */
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  background: #0052CC;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.login-btn:hover {
+  background: #003d99;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 82, 204, 0.4);
+}
+
+.login-btn:active {
+  transform: scale(0.97) translateY(0);
+  box-shadow: 0 3px 10px rgba(0, 82, 204, 0.3);
+}
+
+/* Links */
+.forgot-link {
+  display: inline-block;
+  font-size: 13px;
+  color: #1a1a1a;
+  text-decoration: none;
+  margin-bottom: 12px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.forgot-link:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+.forgot-link:active {
+  transform: scale(0.97);
+}
+
+.signup-text {
+  font-size: 13px;
+  color: #333;
+}
+
+.signup-text a {
+  color: #0052CC;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.signup-text a:hover {
+  background: rgba(0, 82, 204, 0.12);
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+.signup-text a:active {
+  transform: scale(0.97);
+}
